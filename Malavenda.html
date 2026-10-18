@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malavenda Cafè &amp; Bistro | Private Bar Hire in London Fields</title>
+<meta name="description" content="Hire the bar at Malavenda Cafè & Bistro, London Fields. Up to 60 standing or 36 seated, Italian food, DJ setup and dance floor. From £200 minimum spend.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --paper:#fbf6ee;
+  --cream:#f3e9d9;
+  --sand:#e8d8bf;
+  --wood:#b4824b;
+  --honey:#e2a838;
+  --espresso:#2b1d15;
+  --roast:#3d2a1f;
+  --bottle:#2f4b3b;
+  --brick:#a8482e;
+  --ink:#2b1d15;
+  --muted:#6e5d50;
+  --line:rgba(43,29,21,.12);
+  --radius:18px;
+  --shadow:0 18px 40px -18px rgba(43,29,21,.35);
+  --ease:cubic-bezier(.22,.8,.26,1);
+  --head:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;font-size:16.5px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800}
+h3{font-weight:700}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brick);margin-bottom:14px}
+.lead{color:var(--muted);font-size:1.08rem;max-width:58ch}
+section{padding:110px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;font-weight:700;transition:transform .3s var(--ease),background .3s,box-shadow .3s,color .3s}
+.btn-honey{background:var(--honey);color:var(--espresso)}
+.btn-honey:hover{transform:translateY(-2px);box-shadow:0 12px 24px -10px rgba(226,168,56,.7);background:#eab64f}
+.btn-dark{background:var(--espresso);color:var(--paper)}
+.btn-dark:hover{transform:translateY(-2px);background:var(--roast)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.22)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,box-shadow .4s,padding .4s;padding:18px 0}
+header.solid{background:rgba(251,246,238,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:10px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:800;font-size:1.35rem;color:#fff;transition:color .4s}
+.logo i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--honey);color:var(--espresso);font-size:1rem}
+.logo small{display:block;font-family:var(--body);font-weight:600;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;opacity:.8}
+header.solid .logo{color:var(--espresso)}
+.links{display:flex;gap:30px;list-style:none}
+.links a{color:#fff;font-weight:600;font-size:.95rem;position:relative;transition:color .3s}
+.links a::after{content:"";position:absolute;left:0;bottom:-5px;height:2px;width:100%;background:var(--honey);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.links a:hover::after{transform:scaleX(1)}
+header.solid .links a{color:var(--ink)}
+.nav .btn{padding:11px 22px}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.4rem;cursor:pointer;width:44px;height:44px}
+header.solid .burger{color:var(--espresso)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;color:#fff;padding:110px 0 32px;overflow:hidden}
+.hero-main{flex:1;display:flex;align-items:center;padding:24px 0 40px}
+.hero-bg{position:absolute;inset:0;background:url('https://www.tagvenue.com/resize/202609/76/2e/widen-1680-noupsize;103179-bar-room-87aA4nxi.jpg') center/cover;transform:scale(1.08);animation:settle 2.4s var(--ease) forwards}
+@keyframes settle{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,18,12,.92) 0%,rgba(28,18,12,.78) 38%,rgba(28,18,12,.35) 70%,rgba(28,18,12,.2) 100%),linear-gradient(180deg,rgba(28,18,12,.5) 0%,transparent 25%,transparent 70%,rgba(28,18,12,.7) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(43,29,21,.55);border:1px solid rgba(255,255,255,.2);padding:8px 16px;border-radius:999px;font-weight:600;font-size:.88rem;margin-bottom:22px;backdrop-filter:blur(6px)}
+.hero-tag i{color:var(--honey)}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.6rem);font-weight:800;max-width:12ch;line-height:1.02;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero h1 em{font-style:normal;color:var(--honey)}
+.hero p{margin-top:18px;font-size:1.1rem;max-width:46ch;color:rgba(255,255,255,.9);text-shadow:0 1px 12px rgba(0,0,0,.4)}
+.hero-actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+
+/* quick bar */
+.quick{position:relative;z-index:5;color:var(--ink)}
+.quick form{background:var(--paper);border-radius:22px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:0;padding:10px;border:1px solid var(--line)}
+.qf{padding:12px 20px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.qf:nth-child(3){border-right:0}
+.qf label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;gap:7px;align-items:center}
+.qf label i{color:var(--brick)}
+.qf input,.qf select{border:0;background:transparent;font-weight:600;font-size:1.02rem;padding:4px 0;width:100%;outline:none;cursor:pointer}
+.quick .btn{border-radius:16px;padding:0 30px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:26px;color:var(--muted);font-weight:600;font-size:.95rem}
+.facts span{display:inline-flex;gap:8px;align-items:center}
+.facts i{color:var(--wood)}
+
+/* space */
+.space-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;margin-top:50px;grid-template-areas:"img text" "img dj"}
+.space-img{grid-area:img;border-radius:var(--radius);overflow:hidden;min-height:520px;position:relative}
+.space-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.space-img:hover img{transform:scale(1.05)}
+.space-img .tag{position:absolute;left:18px;bottom:18px;background:var(--paper);padding:10px 16px;border-radius:12px;font-weight:700;font-size:.9rem;display:flex;gap:8px;align-items:center}
+.space-img .tag i{color:var(--brick)}
+.space-text{grid-area:text;background:var(--cream);border-radius:var(--radius);padding:34px}
+.space-text h3{font-size:1.6rem;margin-bottom:12px}
+.space-text p{color:var(--muted)}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.feat li{list-style:none;display:flex;gap:10px;align-items:center;font-weight:600;font-size:.95rem}
+.feat i{width:34px;height:34px;flex:none;border-radius:10px;display:grid;place-items:center;background:var(--paper);color:var(--brick);font-size:.9rem;transition:transform .3s var(--ease),background .3s,color .3s}
+.feat li:hover i{transform:rotate(-8deg) scale(1.08);background:var(--brick);color:#fff}
+.dj{grid-area:dj;border-radius:var(--radius);overflow:hidden;position:relative;color:#fff;min-height:250px;display:flex;align-items:flex-end}
+.dj img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.dj:hover img{transform:scale(1.06)}
+.dj::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(43,29,21,.9),rgba(43,29,21,.1))}
+.dj div{position:relative;z-index:2;padding:28px}
+.dj h3{font-size:1.45rem;display:flex;gap:10px;align-items:center}
+.dj h3 i{color:var(--honey)}
+.dj p{opacity:.88;margin-top:6px;font-size:.97rem}
+.quote{margin-top:28px;display:flex;gap:16px;align-items:flex-start;padding:24px 28px;border-left:4px solid var(--honey);background:#fff;border-radius:0 var(--radius) var(--radius) 0}
+.quote i{color:var(--honey);font-size:1.5rem}
+.quote p{font-family:var(--head);font-size:1.25rem;font-weight:500;line-height:1.35}
+
+/* gallery */
+.gallery{background:var(--espresso);color:var(--paper)}
+.gallery .eyebrow{color:var(--honey)}
+.gallery .lead{color:rgba(251,246,238,.7)}
+.g-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.filters{display:flex;gap:8px;background:rgba(255,255,255,.07);padding:6px;border-radius:999px}
+.filters button{border:0;background:transparent;color:var(--paper);padding:10px 20px;border-radius:999px;font-weight:600;cursor:pointer;transition:background .3s,color .3s}
+.filters button.on{background:var(--honey);color:var(--espresso)}
+.filters button:not(.on):hover{background:rgba(255,255,255,.1)}
+.g-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:14px;margin-top:44px}
+.g-item{position:relative;border-radius:14px;overflow:hidden;cursor:zoom-in;border:0;padding:0;background:var(--roast);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.g-item.wide{grid-column:span 2}
+.g-item.tall{grid-row:span 2}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease),filter .5s}
+.g-item:hover img{transform:scale(1.07);filter:brightness(.82)}
+.g-item .cap{position:absolute;left:14px;right:14px;bottom:12px;color:#fff;font-weight:600;font-size:.9rem;text-align:left;opacity:0;transform:translateY(8px);transition:.4s var(--ease);display:flex;gap:8px;align-items:center}
+.g-item:hover .cap,.g-item:focus-visible .cap{opacity:1;transform:none}
+.g-item.hide{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(20,13,9,.94);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-width:min(1100px,90vw);max-height:80vh;border-radius:12px;transform:scale(.96);transition:transform .4s var(--ease)}
+.lb.open img{transform:none}
+.lb p{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:var(--paper);font-weight:500}
+.lb button{position:absolute;background:rgba(255,255,255,.1);border:0;color:#fff;width:52px;height:52px;border-radius:50%;cursor:pointer;font-size:1.1rem;transition:background .3s}
+.lb button:hover{background:var(--honey);color:var(--espresso)}
+.lb .x{top:22px;right:22px}.lb .prev{left:22px}.lb .next{right:22px}
+
+/* capacity */
+.cap-row{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:44px}
+.cap-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 14px;text-align:center;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s}
+.cap-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--honey)}
+.cap-card i{font-size:1.4rem;color:var(--brick)}
+.cap-card b{display:block;font-family:var(--head);font-size:2.2rem;font-weight:800;margin-top:8px;line-height:1}
+.cap-card span{font-size:.88rem;color:var(--muted);font-weight:600}
+.ideal{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.ideal span{background:var(--cream);padding:9px 16px;border-radius:999px;font-weight:600;font-size:.92rem;display:inline-flex;gap:8px;align-items:center;transition:background .3s,color .3s}
+.ideal span:hover{background:var(--bottle);color:#fff}
+.ideal i{color:var(--wood)}
+.ideal span:hover i{color:var(--honey)}
+
+/* pricing */
+.pricing{background:var(--cream)}
+.price-wrap{display:grid;grid-template-columns:320px 1fr;gap:40px;margin-top:44px;align-items:start}
+.days{display:flex;flex-direction:column;gap:8px}
+.day{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-radius:14px;border:1px solid transparent;background:transparent;cursor:pointer;font-weight:700;text-align:left;transition:background .3s,border-color .3s,transform .3s var(--ease)}
+.day small{font-weight:600;color:var(--muted)}
+.day:hover{background:rgba(255,255,255,.55);transform:translateX(4px)}
+.day.on{background:#fff;border-color:var(--honey);box-shadow:var(--shadow)}
+.day.on small{color:var(--brick)}
+.sessions{display:grid;gap:14px}
+.sess{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;background:#fff;border-radius:var(--radius);padding:24px 26px;border:1px solid var(--line);animation:pop .5s var(--ease) both;transition:transform .35s var(--ease),box-shadow .35s}
+.sess:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+@keyframes pop{from{opacity:0;transform:translateY(14px)}}
+.sess .ico{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:var(--cream);color:var(--brick);font-size:1.3rem}
+.sess h3{font-size:1.25rem}
+.sess .time{color:var(--muted);font-weight:600;font-size:.95rem}
+.sess .amt{text-align:right}
+.sess .amt b{font-family:var(--head);font-size:1.9rem;font-weight:800;display:block;line-height:1}
+.sess .amt small{color:var(--muted);font-size:.82rem}
+.sess .btn{grid-column:1/-1;justify-self:start;padding:10px 18px;font-size:.92rem}
+.price-note{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:18px;color:var(--muted);font-size:.92rem;font-weight:600}
+.price-note i{color:var(--bottle);margin-right:6px}
+
+/* food & facilities */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+.panel{border-radius:var(--radius);padding:36px;position:relative;overflow:hidden}
+.panel h3{font-size:1.6rem;margin-bottom:20px;display:flex;gap:12px;align-items:center}
+.panel.food{background:var(--bottle);color:var(--paper)}
+.panel.food h3 i{color:var(--honey)}
+.panel.fac{background:#fff;border:1px solid var(--line)}
+.panel.fac h3 i{color:var(--brick)}
+.ticks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+.ticks li{display:flex;gap:10px;align-items:center;font-weight:500}
+.ticks li i{width:20px;text-align:center}
+.food .ticks i{color:var(--honey)}
+.fac .ticks i{color:var(--wood)}
+.ticks li.no{opacity:.7}
+.food .ticks li.no i{color:#f2a48e}
+.panel .sub{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18);font-size:.95rem;opacity:.85}
+.fac .sub{border-color:var(--line);color:var(--muted)}
+
+/* booking */
+.booking{background:var(--espresso);color:var(--paper);position:relative;overflow:hidden}
+.booking .eyebrow{color:var(--honey)}
+.booking .lead{color:rgba(251,246,238,.72)}
+.book-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:28px;margin-top:44px;align-items:start}
+.bform{background:var(--paper);color:var(--ink);border-radius:22px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.82rem;font-weight:700;color:var(--muted);display:flex;gap:7px;align-items:center}
+.field label i{color:var(--brick)}
+.field input,.field select,.field textarea{border:1.5px solid var(--sand);background:#fff;border-radius:12px;padding:12px 14px;outline:none;transition:border-color .3s,box-shadow .3s;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--honey);box-shadow:0 0 0 4px rgba(226,168,56,.18)}
+.field textarea{resize:vertical;min-height:84px}
+.field .err{color:var(--brick);font-size:.82rem;font-weight:600;display:none}
+.field.bad input,.field.bad select{border-color:var(--brick)}
+.field.bad .err{display:block}
+.stepper{display:flex;align-items:center;border:1.5px solid var(--sand);border-radius:12px;background:#fff;overflow:hidden}
+.stepper button{width:46px;height:46px;border:0;background:var(--cream);cursor:pointer;font-size:.9rem;transition:background .3s}
+.stepper button:hover{background:var(--honey)}
+.stepper input{border:0!important;text-align:center;font-weight:700;box-shadow:none!important}
+.warn{grid-column:1/-1;display:none;gap:10px;align-items:center;background:#fbe8e1;color:var(--brick);padding:12px 16px;border-radius:12px;font-weight:600;font-size:.92rem}
+.warn.show{display:flex;animation:pop .4s var(--ease)}
+.bform .btn{grid-column:1/-1;justify-content:center;padding:16px;font-size:1.05rem}
+.summary{background:var(--roast);border-radius:22px;padding:28px;position:sticky;top:100px;border:1px solid rgba(255,255,255,.08)}
+.summary h3{font-size:1.3rem;margin-bottom:18px;display:flex;gap:10px;align-items:center}
+.summary h3 i{color:var(--honey)}
+.srow{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.14);font-size:.95rem}
+.srow span{opacity:.7}
+.srow b{text-align:right}
+.total{display:flex;justify-content:space-between;align-items:flex-end;margin-top:18px}
+.total b{font-family:var(--head);font-size:2.3rem;color:var(--honey);line-height:1}
+.total span{opacity:.7;font-size:.9rem}
+.policy{margin-top:20px;font-size:.86rem;opacity:.75;display:flex;gap:10px}
+.policy i{color:var(--honey);margin-top:3px}
+.done{grid-column:1/-1;text-align:center;padding:30px 10px;display:none}
+.done i{font-size:3rem;color:var(--bottle)}
+.done h3{font-size:1.7rem;margin:14px 0 8px}
+.done p{color:var(--muted)}
+.bform.sent > :not(.done){display:none}
+.bform.sent .done{display:block;animation:pop .5s var(--ease)}
+
+/* host */
+.host-card{display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:26px;padding:40px;margin-top:10px}
+.host-photo{width:130px;height:130px;border-radius:50%;object-fit:cover;border:5px solid var(--cream);box-shadow:0 0 0 2px var(--honey)}
+.host-card h3{font-size:2rem}
+.host-card .role{color:var(--brick);font-weight:700;margin:4px 0 12px}
+.host-card p{color:var(--muted);max-width:52ch}
+.host-stats{display:grid;gap:12px}
+.hs{background:var(--cream);border-radius:14px;padding:14px 22px;display:flex;gap:14px;align-items:center;min-width:220px;transition:transform .3s var(--ease)}
+.hs:hover{transform:translateX(-4px)}
+.hs i{color:var(--bottle);font-size:1.2rem}
+.hs b{font-family:var(--head);font-size:1.4rem;display:block;line-height:1.1}
+.hs small{color:var(--muted);font-weight:600}
+
+/* faq */
+.faq{background:var(--cream)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}
+.acc{border-bottom:1px solid var(--line)}
+.acc button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:var(--head);font-weight:700;font-size:1.15rem}
+.acc button i{width:34px;height:34px;flex:none;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--brick);font-size:.85rem;transition:transform .4s var(--ease),background .3s,color .3s}
+.acc button:hover i{background:var(--honey);color:var(--espresso)}
+.acc.open button i{transform:rotate(45deg);background:var(--brick);color:#fff}
+.acc .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.acc.open .ans{grid-template-rows:1fr}
+.acc .ans > div{overflow:hidden}
+.acc .ans p{padding:0 50px 22px 0;color:var(--muted)}
+
+/* location */
+.loc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;margin-top:44px}
+.loc-photo{border-radius:var(--radius);overflow:hidden;position:relative;min-height:420px}
+.loc-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.loc-photo:hover img{transform:scale(1.05)}
+.loc-info{position:absolute;left:16px;right:16px;bottom:16px;background:var(--paper);border-radius:14px;padding:20px;display:grid;gap:10px}
+.loc-info div{display:flex;gap:12px;align-items:center;font-weight:600}
+.loc-info i{color:var(--brick);width:18px}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:420px}
+.map iframe{width:100%;height:100%;border:0;min-height:420px;filter:sepia(.25) saturate(.9)}
+
+/* footer */
+footer{background:var(--espresso);color:rgba(251,246,238,.75);padding:70px 0 0}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}
+footer .logo{color:var(--paper);margin-bottom:16px}
+footer h4{font-family:var(--head);color:var(--paper);font-size:1.05rem;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a{transition:color .3s,padding .3s}
+footer ul a:hover{color:var(--honey);padding-left:4px}
+footer li i{color:var(--honey);width:20px}
+.f-bottom{margin-top:56px;border-top:1px solid rgba(255,255,255,.1);padding:24px 0;text-align:center;font-size:.9rem}
+
+/* mobile sticky bar */
+.mbar{display:none}
+
+/* responsive */
+@media (max-width:1024px){
+  .cap-row{grid-template-columns:repeat(4,1fr)}
+  .g-grid{grid-template-columns:repeat(3,1fr)}
+  .host-card{grid-template-columns:auto 1fr}
+  .host-stats{grid-column:1/-1;grid-template-columns:repeat(3,1fr)}
+  .hs{min-width:0}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  section{padding:80px 0}
+  .links{position:fixed;inset:0 0 0 auto;width:min(320px,85vw);background:var(--paper);flex-direction:column;padding:100px 34px;gap:24px;transform:translateX(100%);transition:transform .45s var(--ease);box-shadow:-20px 0 40px rgba(0,0,0,.2)}
+  .links.open{transform:none}
+  .links a{color:var(--ink)!important;font-size:1.15rem}
+  .burger{display:block;z-index:60;position:relative}
+  .links.open ~ .burger,.burger.x{color:var(--espresso)}
+  .nav > .btn{display:none}
+  .quick form{grid-template-columns:1fr 1fr}
+  .qf:nth-child(2){border-right:0}
+  .qf:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .qf:nth-child(3){grid-column:1/-1}
+  .quick .btn{grid-column:1/-1;padding:15px}
+  .space-grid{grid-template-columns:1fr;grid-template-areas:"img" "text" "dj"}
+  .space-img{min-height:360px}
+  .price-wrap{grid-template-columns:1fr}
+  .days{flex-direction:row;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
+  .day{flex:none;flex-direction:column;align-items:flex-start;gap:2px;padding:12px 16px}
+  .day:hover{transform:none}
+  .split,.book-grid,.faq-grid,.loc-grid{grid-template-columns:1fr}
+  .summary{position:static;order:-1}
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;background:var(--espresso);color:var(--paper);border-radius:16px;padding:10px 10px 10px 18px;justify-content:space-between;align-items:center;box-shadow:var(--shadow);transform:translateY(140%);transition:transform .45s var(--ease)}
+  .mbar.show{transform:none}
+  .mbar b{font-family:var(--head);color:var(--honey);font-size:1.15rem}
+  .mbar small{display:block;opacity:.7;font-size:.78rem}
+  .mbar .btn{padding:11px 18px}
+  footer{padding-bottom:80px}
+}
+@media (max-width:600px){
+  .hero{padding:96px 0 20px}
+  .hero-main{align-items:flex-end}
+  .hero::after{background:linear-gradient(180deg,rgba(28,18,12,.55) 0%,rgba(28,18,12,.45) 40%,rgba(28,18,12,.9) 100%)}
+  .cap-row{grid-template-columns:repeat(2,1fr)}
+  .g-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .g-item.wide{grid-column:span 2}
+  .feat,.ticks{grid-template-columns:1fr}
+  .bform{grid-template-columns:1fr;padding:22px}
+  .sess{grid-template-columns:auto 1fr;padding:20px}
+  .sess .amt{grid-column:1/-1;text-align:left;display:flex;gap:10px;align-items:baseline}
+  .host-card{grid-template-columns:1fr;text-align:center;padding:30px 22px}
+  .host-photo{margin:auto}
+  .host-card p{margin:auto}
+  .host-stats{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .filters{width:100%;overflow-x:auto}
+  .filters button{flex:none;padding:10px 16px}
+  .acc .ans p{padding-right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+  .hero-bg{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#home" class="logo"><i class="fa-solid fa-mug-hot"></i><span>Malavenda<small>Cafè &amp; Bistro</small></span></a>
+    <ul class="links" id="links">
+      <li><a href="#space">The Space</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#host">Your Host</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#location">Location</a></li>
+    </ul>
+    <a href="#book" class="btn btn-honey"><i class="fa-regular fa-calendar-check"></i>Book the Bar</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-bg" role="img" aria-label="Wood panelled bar with stools, round tables and vinyl records at Malavenda"></div>
+  <div class="hero-main"><div class="wrap">
+    <span class="hero-tag reveal"><i class="fa-solid fa-location-dot"></i>London Fields, Hackney</span>
+    <h1 class="reveal d1">Your own <em>Italian bar</em> for the night.</h1>
+    <p class="reveal d2">A warm, wood panelled bar with turntables, a dance floor and a proper Italian kitchen. Hire it for drinks, birthdays, team socials and long lazy lunches.</p>
+    <div class="hero-actions reveal d3">
+      <a href="#book" class="btn btn-honey"><i class="fa-regular fa-calendar-check"></i>Check your date</a>
+      <a href="#gallery" class="btn btn-ghost"><i class="fa-regular fa-images"></i>See the photos</a>
+    </div>
+  </div>
+</div>
+  <div class="wrap quick reveal">
+  <form id="quickForm" aria-label="Quick availability check">
+    <div class="qf">
+      <label for="qDate"><i class="fa-regular fa-calendar"></i>Event date</label>
+      <input type="date" id="qDate" required>
+    </div>
+    <div class="qf">
+      <label for="qGuests"><i class="fa-solid fa-user-group"></i>Guests</label>
+      <select id="qGuests">
+        <option value="10">Up to 10</option>
+        <option value="20" selected>11 to 20</option>
+        <option value="36">21 to 36</option>
+        <option value="60">37 to 60</option>
+      </select>
+    </div>
+    <div class="qf">
+      <label for="qType"><i class="fa-solid fa-star"></i>Occasion</label>
+      <select id="qType"></select>
+    </div>
+    <button class="btn btn-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Check price</button>
+  </form>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="facts reveal">
+    <span><i class="fa-solid fa-users"></i>Up to 60 standing</span>
+    <span><i class="fa-solid fa-chair"></i>36 seated</span>
+    <span><i class="fa-solid fa-sterling-sign"></i>From £200 minimum spend</span>
+    <span><i class="fa-solid fa-train-subway"></i>0.1 mi from London Fields Station</span>
+    <span><i class="fa-solid fa-wheelchair"></i>Step free access</span>
+  </div>
+</div>
+
+<!-- SPACE -->
+<section id="space">
+  <div class="wrap">
+    <span class="eyebrow reveal"><i class="fa-solid fa-wine-glass"></i>The Space</span>
+    <h2 class="reveal d1">Cosy, private and<br>ready to party.</h2>
+    <p class="lead reveal d2" style="margin-top:14px">The bar is a semi private, partitioned room set apart from the main café, so your guests get their own space while the kitchen keeps the food coming.</p>
+
+    <div class="space-grid">
+      <figure class="space-img reveal">
+        <img src="https://www.tagvenue.com/resize/202510/53/30/widen-1680-noupsize;103179-malavenda-cafe-bar-room-ZNrULm9I.jpeg" alt="Wooden bar counter with pendant lights, chalkboard menu and shelves of bottles" loading="lazy">
+        <figcaption class="tag"><i class="fa-solid fa-martini-glass-citrus"></i>Staffed service bar</figcaption>
+      </figure>
+      <div class="space-text reveal d1">
+        <h3>Pale wood, warm light, good company</h3>
+        <p>Pendant lights, backlit bottle shelves and framed artwork give the room a relaxed, lived in feel. It works just as well for a quiet seated gathering as it does for a full standing reception.</p>
+        <ul class="feat">
+          <li><i class="fa-solid fa-user-tie"></i>Attended bar</li>
+          <li><i class="fa-solid fa-music"></i>Piano in the room</li>
+          <li><i class="fa-solid fa-sun"></i>Natural daylight</li>
+          <li><i class="fa-solid fa-snowflake"></i>Air conditioning</li>
+          <li><i class="fa-solid fa-wifi"></i>Free Wi Fi</li>
+          <li><i class="fa-solid fa-wheelchair"></i>Accessible toilets</li>
+        </ul>
+      </div>
+      <div class="dj reveal d2">
+        <img src="https://www.tagvenue.com/resize/202510/3b/9b/widen-1680-noupsize;103179-1761571611.jpeg" alt="DJ booth with turntables and vinyl records" loading="lazy">
+        <div>
+          <h3><i class="fa-solid fa-record-vinyl"></i>Turntables and a dance floor</h3>
+          <p>Two Technics decks, a mixer, a built in PA and a small dance floor. Bring your own DJ or ask the venue to book one.</p>
+        </div>
+      </div>
+    </div>
+
+    <blockquote class="quote reveal">
+      <i class="fa-solid fa-quote-left"></i>
+      <p>Guests describe the bar as cosy and welcoming, with friendly, accommodating staff and an easy, relaxed atmosphere.</p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="g-head">
+      <div>
+        <span class="eyebrow reveal"><i class="fa-regular fa-images"></i>Gallery</span>
+        <h2 class="reveal d1">Take a look inside.</h2>
+        <p class="lead reveal d2" style="margin-top:12px">Tap any photo to open it full size.</p>
+      </div>
+      <div class="filters reveal" role="tablist" aria-label="Filter photos">
+        <button class="on" data-f="all" role="tab" aria-selected="true">All photos</button>
+        <button data-f="room" role="tab" aria-selected="false">The Room</button>
+        <button data-f="menu" role="tab" aria-selected="false">On the Menu</button>
+      </div>
+    </div>
+    <div class="g-grid" id="gGrid"></div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="x" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="prev" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lbImg" alt="">
+  <button class="next" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
+  <p id="lbCap"></p>
+</div>
+
+<!-- CAPACITY -->
+<section id="capacity">
+  <div class="wrap">
+    <span class="eyebrow reveal"><i class="fa-solid fa-people-group"></i>Capacity</span>
+    <h2 class="reveal d1">Set it up your way.</h2>
+    <p class="lead reveal d2" style="margin-top:14px">From a 20 person boardroom to a 60 guest standing party, the room adapts to your event.</p>
+    <div class="cap-row">
+      <div class="cap-card reveal"><i class="fa-solid fa-person-walking"></i><b>60</b><span>Standing</span></div>
+      <div class="cap-card reveal d1"><i class="fa-solid fa-utensils"></i><b>36</b><span>Dining</span></div>
+      <div class="cap-card reveal d2"><i class="fa-solid fa-person-chalkboard"></i><b>30</b><span>Theatre</span></div>
+      <div class="cap-card reveal d3"><i class="fa-solid fa-graduation-cap"></i><b>30</b><span>Classroom</span></div>
+      <div class="cap-card reveal"><i class="fa-solid fa-briefcase"></i><b>20</b><span>Boardroom</span></div>
+      <div class="cap-card reveal d1"><i class="fa-solid fa-circle-dot"></i><b>20</b><span>Cabaret</span></div>
+      <div class="cap-card reveal d2"><i class="fa-solid fa-u"></i><b>20</b><span>U shaped</span></div>
+    </div>
+    <div class="ideal reveal">
+      <span><i class="fa-solid fa-cake-candles"></i>Birthday parties</span>
+      <span><i class="fa-solid fa-champagne-glasses"></i>Drinks receptions</span>
+      <span><i class="fa-solid fa-building"></i>Team socials</span>
+      <span><i class="fa-solid fa-handshake"></i>Meetings &amp; workshops</span>
+      <span><i class="fa-solid fa-headphones"></i>DJ nights</span>
+      <span><i class="fa-solid fa-ring"></i>Engagement parties</span>
+      <span><i class="fa-solid fa-ticket"></i>Ticketed events</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <span class="eyebrow reveal"><i class="fa-solid fa-tags"></i>Pricing</span>
+    <h2 class="reveal d1">Pick a day, see the price.</h2>
+    <p class="lead reveal d2" style="margin-top:14px">No hire fee. You simply agree a minimum spend on food and drinks, and every penny goes on your guests.</p>
+    <div class="price-wrap">
+      <div class="days reveal" id="days" role="tablist" aria-label="Choose a day"></div>
+      <div>
+        <div class="sessions" id="sessions" aria-live="polite"></div>
+        <div class="price-note">
+          <span><i class="fa-solid fa-receipt"></i>All prices include VAT</span>
+          <span><i class="fa-solid fa-wine-bottle"></i>Alcohol licence until 23:00</span>
+          <span><i class="fa-solid fa-volume-low"></i>Music volume eases after 22:30</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD & FACILITIES -->
+<section id="extras">
+  <div class="wrap">
+    <span class="eyebrow reveal"><i class="fa-solid fa-pizza-slice"></i>Food, Drink &amp; Facilities</span>
+    <h2 class="reveal d1">Everything is in house.</h2>
+    <div class="split">
+      <div class="panel food reveal">
+        <h3><i class="fa-solid fa-plate-wheat"></i>Food &amp; drink</h3>
+        <ul class="ticks">
+          <li><i class="fa-solid fa-check"></i>Italian kitchen</li>
+          <li><i class="fa-solid fa-check"></i>Full bar &amp; wine list</li>
+          <li><i class="fa-solid fa-leaf"></i>Extensive vegan menu</li>
+          <li><i class="fa-solid fa-carrot"></i>Extensive vegetarian menu</li>
+          <li><i class="fa-solid fa-wheat-awn-circle-exclamation"></i>Extensive gluten free menu</li>
+          <li><i class="fa-solid fa-mug-saucer"></i>Coffee &amp; breakfast</li>
+          <li class="no"><i class="fa-solid fa-xmark"></i>No outside catering</li>
+          <li class="no"><i class="fa-solid fa-xmark"></i>No BYO alcohol</li>
+        </ul>
+        <p class="sub">Tell Roberta about your guests and budget and the team will put together a menu, from aperitivo platters to a seated pasta dinner.</p>
+      </div>
+      <div class="panel fac reveal d1">
+        <h3><i class="fa-solid fa-toolbox"></i>Facilities</h3>
+        <ul class="ticks">
+          <li><i class="fa-solid fa-volume-high"></i>PA system &amp; speakers</li>
+          <li><i class="fa-solid fa-sliders"></i>8 channel mixer</li>
+          <li><i class="fa-solid fa-video"></i>Projector</li>
+          <li><i class="fa-solid fa-phone-volume"></i>Conference call kit</li>
+          <li><i class="fa-solid fa-chalkboard"></i>Whiteboard &amp; flipchart</li>
+          <li><i class="fa-solid fa-box-archive"></i>Storage space</li>
+          <li><i class="fa-solid fa-ear-deaf"></i>Soundproofed room</li>
+          <li><i class="fa-solid fa-square-parking"></i>Paid parking nearby</li>
+        </ul>
+        <p class="sub"><i class="fa-solid fa-wheelchair" style="color:var(--brick);margin-right:6px"></i>Ground level, wheelchair accessible throughout, with accessible toilets and an accessible parking spot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="book">
+  <div class="wrap">
+    <span class="eyebrow reveal"><i class="fa-regular fa-calendar-check"></i>Book the Bar</span>
+    <h2 class="reveal d1">Send your enquiry.</h2>
+    <p class="lead reveal d2" style="margin-top:14px">Choose a date and session and you will see your minimum spend straight away. Roberta usually replies within 3 hours.</p>
+
+    <div class="book-grid">
+      <form class="bform reveal" id="bookForm" novalidate>
+        <div class="field">
+          <label for="bType"><i class="fa-solid fa-star"></i>Occasion</label>
+          <select id="bType"></select>
+        </div>
+        <div class="field">
+          <label for="bLayout"><i class="fa-solid fa-table-cells-large"></i>Layout</label>
+          <select id="bLayout">
+            <option value="60">Standing (up to 60)</option>
+            <option value="36">Dining (up to 36)</option>
+            <option value="30">Theatre (up to 30)</option>
+            <option value="30">Classroom (up to 30)</option>
+            <option value="20">Boardroom (up to 20)</option>
+            <option value="20">Cabaret (up to 20)</option>
+            <option value="20">U shaped (up to 20)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="bDate"><i class="fa-regular fa-calendar"></i>Event date</label>
+          <input type="date" id="bDate" required>
+          <span class="err">Please choose a date.</span>
+        </div>
+        <div class="field">
+          <label for="bSession"><i class="fa-regular fa-clock"></i>Session</label>
+          <select id="bSession" disabled><option>Pick a date first</option></select>
+        </div>
+        <div class="field">
+          <label for="bGuests"><i class="fa-solid fa-user-group"></i>Guests</label>
+          <div class="stepper">
+            <button type="button" data-step="-1" aria-label="Fewer guests"><i class="fa-solid fa-minus"></i></button>
+            <input type="number" id="bGuests" value="20" min="1" max="60" aria-label="Number of guests">
+            <button type="button" data-step="1" aria-label="More guests"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="bName"><i class="fa-regular fa-user"></i>Your name</label>
+          <input type="text" id="bName" required autocomplete="name" placeholder="Full name">
+          <span class="err">Please add your name.</span>
+        </div>
+        <div class="field">
+          <label for="bEmail"><i class="fa-regular fa-envelope"></i>Email</label>
+          <input type="email" id="bEmail" required autocomplete="email" placeholder="you@email.com">
+          <span class="err">Please add a valid email.</span>
+        </div>
+        <div class="field">
+          <label for="bPhone"><i class="fa-solid fa-phone"></i>Phone <span style="font-weight:500">(optional)</span></label>
+          <input type="tel" id="bPhone" autocomplete="tel" placeholder="07...">
+        </div>
+        <div class="warn" id="warn"><i class="fa-solid fa-triangle-exclamation"></i><span id="warnText"></span></div>
+        <div class="field full">
+          <label for="bMsg"><i class="fa-regular fa-comment"></i>Anything else?</label>
+          <textarea id="bMsg" placeholder="Food ideas, DJ, timings, dietary needs..."></textarea>
+        </div>
+        <button class="btn btn-honey" type="submit"><i class="fa-solid fa-paper-plane"></i>Send enquiry</button>
+        <div class="done" aria-live="polite">
+          <i class="fa-solid fa-circle-check"></i>
+          <h3>Grazie! Your enquiry is in.</h3>
+          <p id="doneText">Roberta will be in touch shortly to confirm your date and menu.</p>
+          <button type="button" class="btn btn-dark" id="again" style="margin-top:18px"><i class="fa-solid fa-rotate-left"></i>Send another</button>
+        </div>
+      </form>
+
+      <aside class="summary reveal d1" aria-label="Booking summary">
+        <h3><i class="fa-solid fa-clipboard-list"></i>Your booking</h3>
+        <div class="srow"><span>Date</span><b id="sDate">Not chosen</b></div>
+        <div class="srow"><span>Session</span><b id="sSess">Not chosen</b></div>
+        <div class="srow"><span>Time</span><b id="sTime">Not chosen</b></div>
+        <div class="srow"><span>Guests</span><b id="sGuests">20</b></div>
+        <div class="total"><span>Minimum spend</span><b id="sTotal">£0</b></div>
+        <p class="policy"><i class="fa-solid fa-shield-heart"></i>Full refund if you cancel 7 days or more before your event. 50% refund inside 7 days.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- HOST -->
+<section id="host">
+  <div class="wrap">
+    <span class="eyebrow reveal"><i class="fa-regular fa-face-smile"></i>Your Host</span>
+    <h2 class="reveal d1" style="margin-bottom:34px">Meet Roberta.</h2>
+    <div class="host-card reveal">
+      <img class="host-photo" src="https://www.tagvenue.com/resize/202511/46/0a/fit-140-140;54306-roberta-malavenda-manager-yClFLDUj.jpg" alt="Roberta Malavenda">
+      <div>
+        <h3>Roberta Malavenda</h3>
+        <p class="role">Owner &amp; your personal event manager</p>
+        <p>Roberta looks after every private hire herself, from the first message to the last espresso. Share your plans and she will help you shape the menu, the music and the setup.</p>
+        <a href="#book" class="btn btn-dark" style="margin-top:20px"><i class="fa-regular fa-envelope"></i>Message Roberta</a>
+      </div>
+      <div class="host-stats">
+        <div class="hs"><i class="fa-solid fa-bolt"></i><div><b>3 hours</b><small>Average response time</small></div></div>
+        <div class="hs"><i class="fa-solid fa-comments"></i><div><b>100%</b><small>Response rate</small></div></div>
+        <div class="hs"><i class="fa-solid fa-award"></i><div><b>Trusted</b><small>Verified booking record</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="eyebrow reveal"><i class="fa-regular fa-circle-question"></i>FAQ</span>
+      <h2 class="reveal d1">Good to know.</h2>
+      <p class="lead reveal d2" style="margin-top:14px">Quick answers to the questions people ask most. Still unsure? Add it to your enquiry.</p>
+      <a href="#book" class="btn btn-honey reveal d3" style="margin-top:26px"><i class="fa-solid fa-calendar-plus"></i>Start booking</a>
+    </div>
+    <div class="reveal" id="faqList">
+      <div class="acc"><button aria-expanded="false">Can we bring our own DJ?<i class="fa-solid fa-plus"></i></button><div class="ans"><div><p>Yes. You are welcome to bring your own DJ, or the venue can provide one. There are two Technics turntables, a mixer and a professional sound system ready to go.</p></div></div></div>
+      <div class="acc"><button aria-expanded="false">What equipment is there for live music?<i class="fa-solid fa-plus"></i></button><div class="ans"><div><p>The bar has a PA system with speakers and an 8 channel mixer, plus a piano in the room. You can also play your own music.</p></div></div></div>
+      <div class="acc"><button aria-expanded="false">How does the minimum spend work?<i class="fa-solid fa-plus"></i></button><div class="ans"><div><p>There is no room hire fee. You agree a minimum amount to spend on food and drinks for your session. Prices include VAT and change by day and time, as shown in the pricing section.</p></div></div></div>
+      <div class="acc"><button aria-expanded="false">What is the cancellation policy?<i class="fa-solid fa-plus"></i></button><div class="ans"><div><p>Cancel 7 days or more before your event start time for a full refund. Cancellations made less than 7 days before receive a 50% refund of the booking price.</p></div></div></div>
+      <div class="acc"><button aria-expanded="false">Can we bring our own food or drinks?<i class="fa-solid fa-plus"></i></button><div class="ans"><div><p>All food and drink is provided in house, so outside catering and BYO alcohol are not allowed. Vegan, vegetarian and gluten free menus are available.</p></div></div></div>
+      <div class="acc"><button aria-expanded="false">Are there any house rules?<i class="fa-solid fa-plus"></i></button><div class="ans"><div><p>No smoking inside the building, and any damage to the space is charged separately. Music needs to be lower after 22:30 and the alcohol licence runs until 23:00. Ticketed events are welcome, though the venue does not hold a wedding licence.</p></div></div></div>
+      <div class="acc"><button aria-expanded="false">Is the venue accessible?<i class="fa-solid fa-plus"></i></button><div class="ans"><div><p>Yes. The bar is on the ground floor with step free access throughout, accessible toilets and an accessible parking spot.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="wrap">
+    <span class="eyebrow reveal"><i class="fa-solid fa-map-pin"></i>Location</span>
+    <h2 class="reveal d1">Right by London Fields.</h2>
+    <div class="loc-grid">
+      <div class="loc-photo reveal">
+        <img src="https://www.tagvenue.com/resize/202510/aa/5f/widen-1680-noupsize;61328-1761572917.jpeg" alt="Malavenda shopfront with large windows, brick exterior and potted plants" loading="lazy">
+        <div class="loc-info">
+          <div><i class="fa-solid fa-location-dot"></i>1E Mentmore Terrace, London E8 3DQ</div>
+          <div><i class="fa-solid fa-train"></i>London Fields Station, 0.1 mi</div>
+          <div><i class="fa-solid fa-car"></i>Paid parking nearby</div>
+        </div>
+      </div>
+      <div class="map reveal d1">
+        <iframe title="Map showing Malavenda Cafè and Bistro" loading="lazy" src="https://maps.google.com/maps?q=1E%20Mentmore%20Terrace%2C%20London%20E8%203DQ&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap f-grid">
+    <div>
+      <a href="#home" class="logo"><i class="fa-solid fa-mug-hot"></i><span>Malavenda<small>Cafè &amp; Bistro</small></span></a>
+      <p>An Italian café and bistro in London Fields with a private bar for parties, socials and gatherings of up to 60 guests.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#space">The Space</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Plan</h4>
+      <ul>
+        <li><a href="#capacity">Capacity</a></li>
+        <li><a href="#extras">Food &amp; Facilities</a></li>
+        <li><a href="#host">Your Host</a></li>
+        <li><a href="#book">Book the Bar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li><i class="fa-solid fa-location-dot"></i>1E Mentmore Terrace, London E8 3DQ</li>
+        <li><i class="fa-solid fa-train-subway"></i>London Fields Station</li>
+        <li><i class="fa-regular fa-clock"></i>Open from 7:00 most days</li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">© <span id="yr"></span> Malavenda Cafè &amp; Bistro. All rights reserved.</div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <div><b>From £200</b><small>minimum spend</small></div>
+  <a href="#book" class="btn btn-honey"><i class="fa-regular fa-calendar-check"></i>Book now</a>
+</div>
+
+<script>
+(() => {
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const IMG = 'https://www.tagvenue.com/resize/';
+
+  /* header + mobile bar */
+  const header = $('header'), mbar = $('#mbar');
+  const onScroll = () => {
+    header.classList.toggle('solid', scrollY > 60);
+    const book = $('#book').getBoundingClientRect();
+    mbar.classList.toggle('show', scrollY > innerHeight * .8 && (book.top > innerHeight || book.bottom < 0));
+  };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* burger */
+  const burger = $('#burger'), links = $('#links');
+  const setMenu = open => {
+    links.classList.toggle('open', open);
+    burger.classList.toggle('x', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+  };
+  burger.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+  $$('a', links).forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  /* reveal */
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .12 });
+  $$('.reveal').forEach(el => io.observe(el));
+
+  /* occasions */
+  const types = ['Birthday party', 'Drinks reception', 'Team social', 'Meeting or workshop', 'Private dinner', 'DJ night', 'Engagement party', 'Something else'];
+  ['#qType', '#bType'].forEach(id => $(id).innerHTML = types.map(t => `<option>${t}</option>`).join(''));
+
+  /* gallery */
+  const photos = [
+    { s: '202510/b2/76/widen-1680-noupsize;103179-1761572307-enhanced-v1-4903268.jpg', c: 'Daylight, high stools and pendant lights', f: 'room', k: 'tall' },
+    { s: '202510/d5/76/widen-1680-noupsize;103179-malavenda-cafe-bar-room-2gsLwAOL.jpg', c: 'The bar in full swing', f: 'room', k: 'wide' },
+    { s: '202510/9e/87/widen-1680-noupsize;61328-malavenda-cafe-bistro-venue-pmx7QkDM.jpg', c: 'Table for four with Italian plates', f: 'menu', k: '' },
+    { s: '202511/91/44/widen-1680-noupsize;103179-bar-room-YSF9h5Ks.jpg', c: 'Exposed brick, framed art and mixed chairs', f: 'room', k: '' },
+    { s: '202510/b8/39/widen-1680-noupsize;61328-malavenda-cafe-bistro-venue-rScys8jm.jpg', c: 'Pasta, wine and the green lamp', f: 'menu', k: 'tall' },
+    { s: '202510/ad/12/widen-1680-noupsize;61328-malavenda-cafe-bistro-venue-5xP3wBiY.jpg', c: 'Pasta at the bar counter', f: 'room', k: 'wide' },
+    { s: '202510/52/4d/widen-1680-noupsize;61328-malavenda-cafe-bistro-venue-9Uf5e28c.jpg', c: 'Gnocchi on floral plates', f: 'menu', k: '' },
+    { s: '202510/b6/4b/widen-1680-noupsize;61328-malavenda-cafe-bistro-venue-k33aNute.jpg', c: 'Ham and cheese bruschetta with an Italian beer', f: 'menu', k: '' },
+    { s: '202510/1b/09/widen-1680-noupsize;61328-malavenda-cafe-bistro-venue-cOYXkcHg.jpg', c: 'Prosciutto croissant with sun dried tomato', f: 'menu', k: 'wide' },
+    { s: '202510/76/dc/widen-1680-noupsize;61328-malavenda-cafe-bistro-venue-AFc6aQsn.jpg', c: 'Brioche sandwich and a glass of red', f: 'menu', k: '' },
+    { s: '202510/89/e4/widen-1680-noupsize;61328-malavenda-cafe-bistro-venue-vXO3Uk6r.jpg', c: 'Fresh cream and raspberry cake', f: 'menu', k: '' }
+  ];
+  const grid = $('#gGrid');
+  grid.innerHTML = photos.map((p, i) => `
+    <button class="g-item reveal ${p.k}" data-f="${p.f}" data-i="${i}" aria-label="Open photo: ${p.c}">
+      <img src="${IMG + p.s}" alt="${p.c}" loading="lazy">
+      <span class="cap"><i class="fa-solid fa-expand"></i>${p.c}</span>
+    </button>`).join('');
+  $$('.g-item').forEach(el => io.observe(el));
+
+  $$('.filters button').forEach(b => b.addEventListener('click', () => {
+    $$('.filters button').forEach(x => { x.classList.toggle('on', x === b); x.setAttribute('aria-selected', x === b); });
+    const f = b.dataset.f;
+    $$('.g-item').forEach(it => it.classList.toggle('hide', f !== 'all' && it.dataset.f !== f));
+  }));
+
+  /* lightbox */
+  const lb = $('#lb'), lbImg = $('#lbImg'), lbCap = $('#lbCap');
+  let cur = 0, lastFocus;
+  const visible = () => $$('.g-item:not(.hide)').map(el => +el.dataset.i);
+  const show = i => { cur = i; lbImg.src = IMG + photos[i].s; lbImg.alt = photos[i].c; lbCap.textContent = photos[i].c; };
+  const step = d => { const v = visible(); show(v[(v.indexOf(cur) + d + v.length) % v.length]); };
+  const close = () => { lb.classList.remove('open'); document.body.style.overflow = ''; lastFocus && lastFocus.focus(); };
+  grid.addEventListener('click', e => {
+    const it = e.target.closest('.g-item'); if (!it) return;
+    lastFocus = it; show(+it.dataset.i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; $('.x', lb).focus();
+  });
+  $('.x', lb).onclick = close;
+  $('.prev', lb).onclick = () => step(-1);
+  $('.next', lb).onclick = () => step(1);
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') step(-1);
+    if (e.key === 'ArrowRight') step(1);
+  });
+
+  /* pricing data (index = JS getDay, 0 Sunday) */
+  const PRICES = {
+    1: [{ n: 'Full day', t: '8:00 to 22:00', p: 400, i: 'fa-sun' }],
+    2: [{ n: 'Full day', t: '7:30 to 21:00', p: 400, i: 'fa-sun' }],
+    3: [{ n: 'Full day', t: '8:00 to 22:00', p: 200, i: 'fa-sun' }],
+    4: [{ n: 'Morning', t: '7:00 to 13:00', p: 200, i: 'fa-mug-hot' }, { n: 'Afternoon', t: '13:00 to 18:00', p: 200, i: 'fa-cloud-sun' }, { n: 'Evening', t: '18:00 to 22:00', p: 400, i: 'fa-moon' }],
+    5: [{ n: 'Morning', t: '7:00 to 13:00', p: 200, i: 'fa-mug-hot' }, { n: 'Afternoon', t: '13:00 to 18:00', p: 300, i: 'fa-cloud-sun' }, { n: 'Evening', t: '18:00 to 22:30', p: 500, i: 'fa-moon' }],
+    6: [{ n: 'Morning', t: '8:00 to 13:00', p: 300, i: 'fa-mug-hot' }, { n: 'Afternoon', t: '13:00 to 18:00', p: 300, i: 'fa-cloud-sun' }, { n: 'Evening', t: '18:00 to 23:00', p: 700, i: 'fa-moon' }],
+    0: [{ n: 'Morning session', t: '8:00 to 13:00', p: 300, i: 'fa-mug-hot' }]
+  };
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const order = [1, 2, 3, 4, 5, 6, 0];
+  const daysEl = $('#days'), sessEl = $('#sessions');
+  daysEl.innerHTML = order.map(d => {
+    const min = Math.min(...PRICES[d].map(s => s.p));
+    return `<button class="day" role="tab" data-d="${d}">${DAYS[d]}<small>from £${min}</small></button>`;
+  }).join('');
+  const renderDay = d => {
+    $$('.day').forEach(b => { const on = +b.dataset.d === d; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); });
+    sessEl.innerHTML = PRICES[d].map((s, i) => `
+      <div class="sess" style="animation-delay:${i * .08}s">
+        <span class="ico"><i class="fa-solid ${s.i}"></i></span>
+        <div><h3>${s.n}</h3><span class="time"><i class="fa-regular fa-clock"></i> ${s.t}</span></div>
+        <div class="amt"><b>£${s.p}</b><small>minimum spend</small></div>
+        <button class="btn btn-dark" data-d="${d}" data-s="${i}"><i class="fa-solid fa-arrow-right"></i>Book this slot</button>
+      </div>`).join('');
+  };
+  daysEl.addEventListener('click', e => { const b = e.target.closest('.day'); if (b) renderDay(+b.dataset.d); });
+  renderDay(5);
+
+  /* booking form */
+  const bDate = $('#bDate'), bSession = $('#bSession'), bGuests = $('#bGuests'), bLayout = $('#bLayout');
+  const pad = n => String(n).padStart(2, '0');
+  const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  [bDate, $('#qDate')].forEach(el => el.min = iso(today));
+  const parse = v => v ? new Date(v + 'T00:00') : null;
+
+  const fillSessions = (keep = 0) => {
+    const d = parse(bDate.value);
+    if (!d) { bSession.disabled = true; bSession.innerHTML = '<option>Pick a date first</option>'; return; }
+    const list = PRICES[d.getDay()];
+    bSession.disabled = false;
+    bSession.innerHTML = list.map((s, i) => `<option value="${i}">${s.n}, ${s.t} (£${s.p})</option>`).join('');
+    bSession.value = Math.min(keep, list.length - 1);
+  };
+
+  const update = () => {
+    const d = parse(bDate.value);
+    const g = Math.max(1, Math.min(60, +bGuests.value || 1));
+    $('#sGuests').textContent = g;
+    if (d) {
+      const s = PRICES[d.getDay()][+bSession.value || 0];
+      $('#sDate').textContent = d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+      $('#sSess').textContent = s.n; $('#sTime').textContent = s.t; $('#sTotal').textContent = '£' + s.p;
+    } else {
+      ['#sDate', '#sSess', '#sTime'].forEach(id => $(id).textContent = 'Not chosen');
+      $('#sTotal').textContent = '£0';
+    }
+    const cap = +bLayout.value, name = bLayout.options[bLayout.selectedIndex].text.split(' (')[0];
+    const warn = $('#warn');
+    if (g > cap) {
+      $('#warnText').textContent = `${name} layout fits up to ${cap} guests. Choose ${g > 36 ? 'Standing' : 'Dining or Standing'} for ${g} guests.`;
+      warn.classList.add('show');
+    } else warn.classList.remove('show');
+  };
+
+  bDate.addEventListener('change', () => { fillSessions(); bDate.closest('.field').classList.remove('bad'); update(); });
+  bSession.addEventListener('change', update);
+  bLayout.addEventListener('change', update);
+  bGuests.addEventListener('input', update);
+  $$('.stepper button').forEach(b => b.addEventListener('click', () => {
+    bGuests.value = Math.max(1, Math.min(60, (+bGuests.value || 0) + +b.dataset.step)); update();
+  }));
+
+  const goBook = () => { $('#book').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); setTimeout(() => $('#bName').focus({ preventScroll: true }), 700); };
+
+  /* "Book this slot" from pricing: next date that falls on that weekday */
+  sessEl.addEventListener('click', e => {
+    const b = e.target.closest('button[data-s]'); if (!b) return;
+    const d = new Date(today); while (d.getDay() !== +b.dataset.d) d.setDate(d.getDate() + 1);
+    if (!bDate.value || parse(bDate.value).getDay() !== +b.dataset.d) bDate.value = iso(d);
+    fillSessions(+b.dataset.s); update(); goBook();
+  });
+
+  /* quick bar */
+  $('#quickForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const q = $('#qDate');
+    if (!q.value) { q.showPicker ? q.showPicker() : q.focus(); return; }
+    bDate.value = q.value; fillSessions();
+    bGuests.value = $('#qGuests').value; $('#bType').value = $('#qType').value;
+    bLayout.selectedIndex = +bGuests.value > 36 ? 0 : (+bGuests.value > 20 ? 1 : bLayout.selectedIndex);
+    update(); goBook();
+  });
+
+  /* submit */
+  const form = $('#bookForm');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    let ok = true;
+    const check = (el, test) => { const f = el.closest('.field'); const bad = !test(el.value.trim()); f.classList.toggle('bad', bad); if (bad && ok) { el.focus(); ok = false; } };
+    check(bDate, v => !!v);
+    check($('#bName'), v => v.length > 1);
+    check($('#bEmail'), v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+    if (!ok) return;
+    const d = parse(bDate.value), s = PRICES[d.getDay()][+bSession.value || 0];
+    $('#doneText').textContent = `We have your request for ${$('#sDate').textContent}, ${s.n.toLowerCase()} (${s.t}) for ${bGuests.value} guests. Roberta will reply to ${$('#bEmail').value.trim()}, usually within 3 hours.`;
+    form.classList.add('sent');
+  });
+  $('#again').addEventListener('click', () => { form.reset(); form.classList.remove('sent'); fillSessions(); update(); });
+  $$('#bName, #bEmail').forEach(el => el.addEventListener('input', () => el.closest('.field').classList.remove('bad')));
+
+  /* faq */
+  $$('.acc button').forEach(b => b.addEventListener('click', () => {
+    const acc = b.parentElement, open = !acc.classList.contains('open');
+    $$('.acc').forEach(a => { a.classList.remove('open'); $('button', a).setAttribute('aria-expanded', 'false'); });
+    if (open) { acc.classList.add('open'); b.setAttribute('aria-expanded', 'true'); }
+  }));
+
+  $('#yr').textContent = new Date().getFullYear();
+  update();
+})();
+</script>
+</body>
+</html>
